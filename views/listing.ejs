@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <div class="container">
+        <%- include('./layout/header.ejs') %>
+
+            <h1>Listing Page</h1>
+
+            <h2>Hello, this is the listing page</h1>
+
+                <div>
+                    <%= currSec %>
+                        <% if (currSec % 2===0){ %>
+                            <ul>
+                                <!--        ForEach loop example-->
+                                <% items.forEach((item)=> { %>
+                                    <li>
+                                        <%= item %>
+                                    </li>
+                                    <% }) %>
+
+                                        <!--        For loop example-->
+                                        <!--            <% for(let i=0;i < items.length;i++){ %>-->
+                                        <!--                <li><%= items[i] %></li>-->
+                                        <!--            <% } %>-->
+                                        <!--            -->
+                            </ul>
+                            <% } else {%>
+                                <p>No items to be displayed</p>
+                                <% } %>
+                </div>
+    </div>
+
+</body>
+
+</html>
